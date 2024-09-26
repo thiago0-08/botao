@@ -1,5 +1,7 @@
 <template>
 <div>
+
+<img v-bind:src="imagemURL">
     <img class="img" src="https://gizmodo.uol.com.br/wp-content/blogs.dir/8/files/2022/04/corinthians-lanca-aplicativo-oficial-com-conteudo-exclusivo-para-torcedores.jpg">
 </div>
 <div class="profile-content">
@@ -11,6 +13,21 @@
 
     Hello world!
 </template>
+
+
+ <script>
+    export default {
+      name: 'testeComponente',
+      
+      // Defina os dados do componente
+      data() {
+        return {
+          // Aqui você declara a variável imagemURL
+          imagemURL: 'https://gizmodo.uol.com.br/wp-content/blogs.dir/8/files/2022/04/corinthians-lanca-aplicativo-oficial-com-conteudo-exclusivo-para-torcedores.jpg'
+        };
+      }
+    };
+</script>
 
 <style>
 .img{
@@ -26,10 +43,6 @@
   }
 </style>
   
-  <script>
-  export default {
-    name: 'testeComponente',
-  };
-  </script>
+
   
-''
+
