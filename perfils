@@ -1,0 +1,29 @@
+<template>
+  <div class="contact-sidebar p-3">
+    <div class="contact-header">
+      <h5>Contatos</h5>
+    </div>
+    <div class="contact-list">
+      <!-- Usando v-for para iterar sobre os contatos -->
+      <div class="contact-item" v-for="(contato, index) in contatos" :key="index">
+        <img v-bind:src="contato.foto" alt="Foto do Contato" class="contact-img">
+        <span class="contact-name">{{ contato.nome }}</span>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      // Lista de contatos com nome e foto
+      contatos: [
+        { nome: 'João Silva', foto: 'https://via.placeholder.com/40' },
+        { nome: 'Maria Oliveira', foto: 'https://via.placeholder.com/40' },
+        { nome: 'Pedro Santos', foto: 'https://via.placeholder.com/40' }
+      ]
+    };
+  }
+};
+</script>
